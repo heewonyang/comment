@@ -1,13 +1,36 @@
-<h1>Edit Article</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+body {
+    background-color: rgba(270, 200, 60, 0.3);
+}
+
+h1 {
+    color: black;
+    text-align: center;
+     font-size: 50px;
+     font-weight: bold;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+<h1>일정 수정하기</h1>
 
 <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
 <p>
-<%= f.label :title %><br>
+<%= f.label :일정 %><br>
 <%= f.text_field :title %>
 
 </p>
+
 <p>
-    <%= f.label :content %><br>
+    <%= f.label :제출기한 %><br>
     <%= f.text_field :content %>
 </p>
 <p>
@@ -15,3 +38,5 @@
 
     </p>
 <% end %>
+</body>
+</html>

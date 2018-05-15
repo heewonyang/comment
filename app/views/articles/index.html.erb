@@ -1,8 +1,47 @@
-<h1>listening articles</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+body {
+    background-color: rgba(270, 200, 60, 0.3);
+}
+
+h1 {
+    color: black;
+    text-align: center;
+     font-size: 50px;
+     font-weight: bold;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: center;
+    
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: brown;
+}
+
+th, td {
+    padding: 15px;
+}
+</style>
+</head>
+<body>
+<h1>일정 리스트</h1>
 <table>
     <tr>
-        <th>title</th>
-        <th>content</th>
+        <th>일정</th>
+        <th>제출기한</th>
+        <th>자세히 보기</th>
     </tr>
     
     <% @articles.each do |article| %>
@@ -14,3 +53,6 @@
     <% end %>
 </table>
 <%= link_to 'New article' , new_article_path %>
+
+</body>
+</html>

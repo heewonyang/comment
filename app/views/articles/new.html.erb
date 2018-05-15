@@ -1,17 +1,65 @@
-<h1>New Article</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+body {
+    background-color: rgba(270, 200, 60, 0.3);
+}
 
+h1 {
+    color: black;
+    text-align: center;
+     font-size: 50px;
+     font-weight: bold;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    
+     
+}
+h2{
+    font-size: 15px;
+}
+.left {
+    position: absolute;
+    left: 300px;
+    width: 300px;
+    
+    padding: 10px;
+}
+.ac{
+    position: absolute;
+    left: 100px;
+    width: 300px;
+    bottom: 90px;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+<h1>일정표</h1>
+<div >
 <%= form_for :article, url: '/articles/' do |f| %>
 <p>
-<%= f.label :title %><br>
+<%= f.label :일정 %><br>
 <%= f.text_field :title %>
 
 </p>
 <p>
-    <%= f.label :content %><br>
+    <%= f.label :제출기한 %> <br>
     <%= f.text_field :content %>
 </p>
 <p>
     <%= f.submit %>
 
     </p>
+    </div>
+    <div class = "ac">
+    
+</div>
 <% end %>
+
+</body>
+</html>
